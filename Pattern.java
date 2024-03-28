@@ -57,6 +57,15 @@ public class Pattern {
         }
     }
 
+    public static void numberHalfPyramid(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=i; j++){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
         
@@ -69,26 +78,28 @@ public class Pattern {
         sc.close();
 
 
-        rectangle(row, column);
+        // rectangle(row, column);
 
-        System.out.println();
-        System.out.println();
+        // System.out.println();
+        // System.out.println();
 
-        borderRectangle(row, column);
+        // borderRectangle(row, column);
 
-        System.out.println();
-        System.out.println();
+        // System.out.println();
+        // System.out.println();
 
-        halfPyramid(row);
+        // halfPyramid(row);
 
-        System.out.println();
-        System.out.println();
+        // System.out.println();
+        // System.out.println();
 
-        invertedHalfPyramid(row);
-        
-        System.out.println();
-        System.out.println();
+        // invertedHalfPyramid(row);
 
-        rotatedHalfPyramid(row);
+        // System.out.println();
+        // System.out.println();
+
+        // rotatedHalfPyramid(row);
+
+        numberHalfPyramid(row);
     }
 }
