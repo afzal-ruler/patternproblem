@@ -1,11 +1,11 @@
 package PatterProblem;
 
-import java.util.Scanner;
 
-public class Pattern {
+class Pattern {
 
+    //printing a rectangle 
 
-    public static void rectangle(int row, int column){
+    void rectangle(int row, int column){
 
         for(int i=1; i<=row; i++){
             for (int j=1; j<=column; j++){
@@ -14,7 +14,10 @@ public class Pattern {
             System.out.println();
         }
     }
-    public static void borderRectangle(int row, int column){
+
+    //printing a hollow rectangle
+
+    void borderRectangle(int row, int column){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=column; j++){
                 if (i==1 || i==row || j==1 || j==column) {
@@ -27,7 +30,10 @@ public class Pattern {
             System.out.println();
         }
     }
-    public static void halfPyramid(int row){
+
+    //printing half pyramid using *
+
+    void halfPyramid(int row){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=i; j++){
                 System.out.print("* ");
@@ -35,7 +41,10 @@ public class Pattern {
             System.out.println();
         }
     }
-    public static void rotatedHalfPyramid(int row){
+
+    //printing half pyramid which is rotated 180 digree
+
+    void rotatedHalfPyramid(int row){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=row-i;j++){
                System.out.print("  ");
@@ -47,8 +56,9 @@ public class Pattern {
             
         }
     }
+    //printing an inverted half pyramid of *
 
-    public static void invertedHalfPyramid(int row){
+    void invertedHalfPyramid(int row){
         for(int i=row; i>=1; i--){
             for(int j=1; j<=i; j++){
                 System.out.print("* ");
@@ -57,7 +67,9 @@ public class Pattern {
         }
     }
 
-    public static void numberHalfPyramid(int row){
+    //printing half pyramid of numbers
+
+    void numberHalfPyramid(int row){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=i; j++){
                 System.out.print(j+" ");
@@ -66,7 +78,9 @@ public class Pattern {
         }
     }
 
-    public static void invertedNumberHalfPyramid(int row){
+    //printing a half inverted pyramid using numbers
+
+    void invertedNumberHalfPyramid(int row){
         for(int i=row; i>=1; i--){
             for(int j=1; j<=i; j++){
                 System.out.print(j+" ");
@@ -74,7 +88,10 @@ public class Pattern {
             System.out.println();
         }
     }
-    public static void floydsNumberTriangle(int row){
+
+    // printing floyds number triangle where numbers are in increasing manner
+
+    void floydsNumberTriangle(int row){
         int k=1;
         for(int i=1;i<=row;i++){
             for(int j=1; j<=i; j++){
@@ -85,7 +102,10 @@ public class Pattern {
         }
     }
 
-    public static void zeroOneTriangle(int row){
+    //printing tringle with integer only 1 and 0
+    //two approches are here 
+
+    void zeroOneTriangle(int row){
         // int z=1;
         // for(int i=1;i<=row; i++){
         //     for(int j=1;j<=i;j++){
@@ -116,44 +136,4 @@ public class Pattern {
         }
     }
 
-
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the row value: ");
-        int row = sc.nextInt();
-        System.out.print("Enter the column value: ");
-        int column = sc.nextInt();
-
-        sc.close();
-
-
-        rectangle(row, column);
-
-        System.out.println();
-        System.out.println();
-
-        borderRectangle(row, column);
-
-        System.out.println();
-        System.out.println();
-
-        halfPyramid(row);
-
-        System.out.println();
-        System.out.println();
-
-        invertedHalfPyramid(row);
-
-        System.out.println();
-        System.out.println();
-
-        rotatedHalfPyramid(row);
-
-        numberHalfPyramid(row);
-        invertedNumberHalfPyramid(row);
-
-        floydsNumberTriangle(row);
-        zeroOneTriangle(row);
-    }
 }
