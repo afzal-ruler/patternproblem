@@ -35,6 +35,19 @@ public class Pattern {
             System.out.println();
         }
     }
+    public static void rotatedHalfPyramid(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=row-i;j++){
+               System.out.print("  ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+            
+        }
+    }
+
     public static void invertedHalfPyramid(int row){
         for(int i=row; i>=1; i--){
             for(int j=1; j<=i; j++){
@@ -55,15 +68,27 @@ public class Pattern {
 
         sc.close();
 
-        invertedHalfPyramid(row);
 
         rectangle(row, column);
+
         System.out.println();
         System.out.println();
+
         borderRectangle(row, column);
+
         System.out.println();
         System.out.println();
+
         halfPyramid(row);
 
+        System.out.println();
+        System.out.println();
+
+        invertedHalfPyramid(row);
+        
+        System.out.println();
+        System.out.println();
+
+        rotatedHalfPyramid(row);
     }
 }
