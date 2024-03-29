@@ -16,6 +16,6 @@ public class Main {
 
         // pr.pyramid(10);
 
-        pr.boundryRhombus(9);
+        pr.pyramid(9);
     }
 }

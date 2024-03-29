@@ -2,6 +2,22 @@ package PatterProblem;
 
 
 class Pattern {
+
+    //<---pyramid pattern using numbers
+    void numberPyramid(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=row-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print(i+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    //<---pattern of boundry of rhombus -->
+
     void boundryRhombus(int row){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=row-i;j++){
@@ -19,6 +35,8 @@ class Pattern {
         }
     }
 
+    //<--printing rhombus pattern using *-->
+
     void rhombus(int row){
         for(int i=1; i<=row; i++){
             for(int j=1; j<=row-i;j++){
@@ -31,16 +49,15 @@ class Pattern {
         }
     }
 
+    //<---printing pyramid using *--->
+
     void pyramid(int row){
         for(int i=1; i<=row; i++){
-            for(int j=2; j<=i; j++){
+            for(int j=1; j<=row-i; j++){
                 System.out.print(" ");
-                if(j==i && i==row){
-                    System.out.print("*");
-                }
             }
-            for(int j=1; j<=2*(row-i); j++){
-                System.out.print("*");
+            for(int j=1; j<=i;j++){
+                System.out.print("* ");
             }
             System.out.println();
         }
