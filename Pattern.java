@@ -2,6 +2,101 @@ package PatterProblem;
 
 
 class Pattern {
+    void boundryRhombus(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=row-i;j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=row; j++){
+                if(j==1 || i==1 || j==row || i== row){
+                    System.out.print("* ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    void rhombus(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=row-i;j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=row; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    void pyramid(int row){
+        for(int i=1; i<=row; i++){
+            for(int j=2; j<=i; j++){
+                System.out.print(" ");
+                if(j==i && i==row){
+                    System.out.print("*");
+                }
+            }
+            for(int j=1; j<=2*(row-i); j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
+    // <----butterfly pattern problem------>
+
+    void butterfly(int row){
+        for(int i=1;i<=row;i++){
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            for(int j=i+1; j<=row; j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=row-i;j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=row-i; j++){
+                System.out.print("* ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.print("  ");
+            }
+            for(int j=1; j<=row-i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+
+
+            // for double line butterfly
+
+        // for(int i=row; i>=1; i--){
+        //     for(int j=1; j<=i; j++){
+        //         System.out.print("* ");
+        //     }
+        //     for(int j=1; j<=2*(row-i);j++){
+        //         System.out.print("  ");
+        //     }
+        //     for(int j=1; j<=i;j++){
+        //         System.out.print("* ");
+        //     }
+        //     System.out.println();
+        // }
+    }
 
     //printing a rectangle 
 
