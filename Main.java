@@ -20,6 +20,6 @@ public class Main {
         pr.pyramid(10);
         pr.rhombus(9);
 
-        //pr.dimondPatter(9);
+        pr.dimondPatter(9);
     }
 }
