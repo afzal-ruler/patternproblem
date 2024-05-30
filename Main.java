@@ -16,7 +16,7 @@ public class Main {
         pr.boundryRhombus(9);
         pr.boundryRhombus(9);
         pr.numberPyramid(9);
-        // pr.pallindromePyramid(0);
+        pr.pallindromePyramid(0);
         pr.pyramid(10);
         pr.rhombus(9);
 
